@@ -1,0 +1,183 @@
+php 8 install in wampserver
+https://www.myonlineedu.com/blog/view/16/how-to-update-to-php-8-in-wamp-server-localhost
+in hhtpd.conf  file loadmodule php8_module was found 
+and
+https://stackoverflow.com/questions/66276070/composer-curl-error-60-ssl-certificate-problem-unable-to-get-local-issuer-cert
+curl.cainfo="C:\Program Files\PHP\cacert.pem"
+---------------------------------------------------------------------
+
+composer create-project --prefer-dist laravel/laravel ecomapi2 "5.4.*"
+
+
+php artisan make:model Product -mcr
+
+
+Php artisan make:model Model\Product –a
+
+php artisan make:resource ProductCollection
+
+php artisan make:factory ProductFactory
+
+php artisan make:seeder ReviewTableSeeder
+
+php artisan db:seed
+
+php artisan migrate
+php artisan migrate:fresh   error:users already exists it will get all
+
+php artisan serve
+
+php artisan config:cache
+php artisan config:clear
+php artisan cache:clear
+
+php artisan migrate:rollback
+
+php artisan make:mail MyTestMail
+
+php -d memory_limit=-1 "C:/ProgramData/ComposerSetup/bin/composer.phar" update(keep trying again again)
+php -r "echo ini_get('memory_limit').PHP_EOL;"
+
+
+for:memory increase
+php --ini
+click on php.ini link and change memory size
+or
+COMPOSER_MEMORY_LIMIT=-1
+
+-------------------------------------------------------------------
+npm uninstall webpack
+npm install -g webpack@4.16.4 --save
+npm info webpack version
+npx mix
+
+error:hide modeules and API schema
+step1:package.json
+"scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "production": "mix --production"
+},
+step2:package.json
+ "devDependencies": {       
+        "webpack": "5.31.2"
+    }
+step3:webpackage.mix.js
+.vue() added
+mix.js('resources/js/app.js', 'public/js').vue()
+    .sass('resources/sass/app.scss', 'public/css');
+step4:npx mix
+----------------------------------------------------------------
+
+
+error: Module not found: Error: Can't resolve 'postcss-loader'
+sol:npm uninstall postcss-loader --save-dev
+    npm install postcss-loader@~3.0.0 --save-dev
+
+php artisan make:model Post -fm
+
+
+
+
+error:npm not installing 
+error npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\ABHISHEK K S\AppData\Local\npm-cache\_logs\2021-06-08T07_19_31_296Z-debug.log
+sol:    1. npm install cross-env
+	2. npm install --dev or npm install --only=dev
+	3. npm cache clean --force
+	4. npm install
+
+
+
+
+error:cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
+sol:https://stackoverflow.com/questions/63680019/npm-run-dev-results-in-windows-error-cross-env-is-not-recognized-as-an-inte
+
+error:TypeError: mix.js is not a function
+sol:npm install laravel-mix --save-dev  
+or
+1.php artisan cache:clear
+2.php artisan config:clear
+3.npm install webpack --save
+0r delete nodemodules and install npm
+
+
+npm not installing problem
+rm -rf node_modules
+rm package-lock.json yarn.lock
+npm cache clear --force
+npm install cross-env
+npm install
+
+
+
+error:Uncaught TypeError: Vue.component is not a function
+sol:npm install laravel-elixir-vue-2 --save-dev
+or
+https://stackoverflow.com/questions/42520992/uncaught-typeerror-vue-component-is-not-a-function
+
+
+error:Uncaught (in promise) Error: Network Error and cors error
+sol:
+
+
+error:app.js:607 Uncaught (in promise) Error: Request failed with status code 500
+    
+sol:In network->click on red mark->preview->message(error will shown)
+this is a case when controller function and route function not match
+
+
+shoutspa
+1.remove 2 js file script for error app not found
+2.uncaught controller promise error
+3.
+
+
+php artisan package:discover --ansi
+
+composer self-update --rollback
+
+composer require laravelcollective/html
+composer require laravelcollective/html --prefer-source
+composer require "laravelcollective/html":"^5.2.0"
+
+
+composer update --no-scripts   use only when composer update is not working
+
+
+---------------------------------------------------------
+CodeInspire
+error:app.js:3332 Uncaught TypeError: Cannot set property '$gate' of undefined
+sol:https://stackoverflow.com/questions/67166414/laravel-mix-in-laravel-7-and-vue-js-erroruncaught-type-error-cannot-set-prope
+
+
+error:In PackageManifest.php line 120:
+
+  Undefined index: name
+sol:composer.lock  remove and composer install
+
+
+
+--------------------------------------------------------
+
+error:Failed to mount component: template or render function not defined.
+
+sol:npm install -D webpack-cli
+follow route in other file 
+
+npm install laravel-mix@6.0.0-beta.4 -D
+
+
+error:Key path "file://C:\xampp\htdocs\rental_5.0\storage\oauth-public.key" does not exist or is not readable
+sol: https://stackoverflow.com/questions/39414956/laravel-passport-key-path-oauth-public-key-does-not-exist-or-is-not-readable
+config/app.php
+Laravel\Passport\PassportServiceProvider::class, 
+php artisan migrate
+php artisan passport:install
+php artisan passport:keys
+
+php artisan cache:clear
+php artisan config:clear
+php artisan config:cache
